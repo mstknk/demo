@@ -1,0 +1,241 @@
+#hipay-3-container {
+  font-family: "Roboto", sans-serif;
+  background-color: white;
+}
+
+#hipay-3-form {
+  margin: auto;
+  width: 100%;
+  max-width: 520px;
+}
+
+.hipay-3-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  margin: 0 0 16px 0;
+}
+
+.hipay-3-field-container {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  width: 100%;
+  height: 50px;
+  margin: 0 10px;
+}
+.hipay-3-field-container-half {
+  width: 50%;
+}
+
+.ie9 .hipay-3-field-container-half {
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+.hipay-3-field {
+  z-index: 2;
+  opacity: 0.001;
+  -webkit-transition: opacity 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+  -o-transition: opacity 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: opacity 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+  will-change: opacity;
+
+  height: 20px;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  margin-bottom: 7px;
+  color: #32325d;
+  background-color: transparent;
+}
+
+@media screen and (max-width: 359px) {
+  .hipay-3-row {
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-bottom: 0;
+  }
+  .hipay-3-field-container {
+    margin-bottom: 16px;
+  }
+  .hipay-3-field-container-half {
+    width: 100%;
+  }
+}
+.hipay-3-field.HiPayField--focused,
+.hipay-3-field:not(.HiPayField--empty) {
+  opacity: 1;
+}
+
+.hipay-3-field.HiPayField--disabled {
+  background-color: #f3f3f3;
+}
+
+.hipay-3-label {
+  z-index: 1;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  bottom: 8px;
+  color: #cfd7df;
+  overflow: hidden;
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  -webkit-transform-origin: 0 50%;
+  -ms-transform-origin: 0 50%;
+  transform-origin: 0 50%;
+  cursor: text;
+  -webkit-transition-property: color, -webkit-transform;
+  transition-property: color, -webkit-transform;
+  -o-transition-property: color, transform;
+  transition-property: color, transform;
+  transition-property: color, transform, -webkit-transform;
+  -webkit-transition-duration: 0.3s;
+  -o-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+  -o-transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.HiPayField--focused + .hipay-3-label,
+.hipay-3-field:not(.HiPayField--empty) + .hipay-3-label {
+  color: #aab7c4;
+  -webkit-transform: scale(0.85) translateY(-25px);
+  -ms-transform: scale(0.85) translateY(-25px);
+  transform: scale(0.85) translateY(-25px);
+  cursor: default;
+}
+
+.HiPayField--focused + .hipay-3-label {
+  color: #00ade9 !important;
+}
+
+.HiPayField--focused + .hipay-3-baseline {
+  color: #00ade9 !important;
+}
+
+.HiPayField--invalid + .hipay-3-label {
+  color: #d50000 !important;
+}
+
+.hipay-3-baseline {
+  position: absolute;
+  width: 100%;
+  height: 0px;
+  left: 0;
+  bottom: 0;
+  border-bottom: solid 1px #cfd7df;
+  /*background-color: #cfd7df;*/
+  -webkit-transition: border-bottom 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+  -o-transition: border-bottom 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: border-bottom 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.HiPayField--focused + .hipay-3-label + .hipay-3-baseline {
+  border-bottom: solid 1px #00ade9;
+}
+
+.HiPayField--invalid + .hipay-3-label + .hipay-3-baseline {
+  border-bottom: solid 1px #d50000;
+}
+
+.HiPayField--disabled + .hipay-3-label + .hipay-3-baseline {
+  border-bottom: dotted 1px #cfd7df;
+}
+
+.hipay-3-elements-container {
+  margin: 0 10px;
+}
+
+#hipay-3-submit-button {
+  width: 100%;
+  height: 36px;
+  margin: 10px 0;
+
+  outline: none;
+  -webkit-box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.24);
+  box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.24);
+  border-style: none;
+  border-radius: 3px;
+  background-color: #00ade9;
+  color: white;
+  cursor: pointer;
+
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 16px;
+}
+
+#hipay-3-submit-button:disabled {
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  background-color: #737373;
+  cursor: not-allowed;
+}
+
+#hipay-3-error-message {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+
+  color: #d50000;
+  font-size: 15px;
+  line-height: 18px;
+  text-align: center;
+}
+
+#hipay-3-error-message i {
+  margin-right: 4px;
+}
+
+#hipay-3-help-cvc,
+#hipay-3-cardholder-help,
+#hipay-3-cardnumber-help {
+  font-size: 14px;
+  padding: 0.75rem 1.25rem;
+  margin-top: 4px;
+  border-radius: 0.25rem;
+  color: #856404;
+  background-color: #fff3cd;
+  border: solid 1px #ffeeba;
+  display: none;
+}
+#hipay-3-help-cvc.visible,
+#hipay-3-cardholder-help.visible,
+#hipay-3-cardnumber-help.visible {
+  display: block;
+}
+
+#hipay-3-result {
+  display: none;
+  background-color: #eaf8ff;
+  padding: 8px;
+  border-radius: 2px;
+  border: solid 1px #00aee6;
+  overflow: scroll;
+}
+#hipay-3-result.visible {
+  display: block;
+}

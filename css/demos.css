@@ -1,0 +1,26 @@
+body {
+  background-color: #fafafa;
+}
+
+#hipay-logo {
+  margin: 16px 0;
+  text-align: center;
+}
+#hipay-canvas {
+  fill: rgb(0, 165, 225);
+}
+
+.demo-container {
+  box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.24);
+
+  margin: 16px auto;
+  max-width: 640px;
+  min-height: 300px;
+  padding: 16px;
+}
+
+@media screen and (min-width: 768px) {
+  .demo-container {
+    padding: 32px;
+  }
+}
